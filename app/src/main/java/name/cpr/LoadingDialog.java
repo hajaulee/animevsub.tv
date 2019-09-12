@@ -18,7 +18,7 @@ public class LoadingDialog{
 		dialog.setMessage("Loading data!");
 		dialog.getWindow().setLayout(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		dialog.getWindow().setGravity(Gravity.CENTER);
-		dialog.setCancelable(false);
+		dialog.setCancelable(true);
 		bg.setCancelable(true);
 	}
 
