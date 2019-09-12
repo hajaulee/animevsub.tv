@@ -184,7 +184,13 @@ public class ExampleActivity extends ActionBarActivity{
     public void onBackPressed(){
         // Notify the VideoEnabledWebChromeClient, and handle it ourselves if it doesn't handle it
         if (!webChromeClient.onBackPressed()){
-            if (webView.canGoBack()){
+			String url = webView.getUrl();
+            if(url.contains("/tap")){
+				webView.loadUrl(url.substring(0, url.indexOf("/tap") + 1));
+			}else if(url.contains("/phim")){
+				webView.loadUrl(url.substring(0, url.indexOf("/phim") + 1));
+			}
+			else if (webView.canGoBack()){
                 webView.goBack();
             }else{
                 // Standard back button implementation (for example this could close the app)
