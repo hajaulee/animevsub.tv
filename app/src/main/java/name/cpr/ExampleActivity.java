@@ -189,6 +189,8 @@ public class ExampleActivity extends ActionBarActivity{
 				webView.loadUrl(url.substring(0, url.indexOf("/tap") + 1));
 			}else if(url.contains("/phim")){
 				webView.loadUrl(url.substring(0, url.indexOf("/phim") + 1));
+			}else if(url.equals("http://animevsub.tv") || url.equals("http://animevsub.tv/")){
+				super.onBackPressed();
 			}
 			else if (webView.canGoBack()){
                 webView.goBack();
